@@ -13,6 +13,13 @@ Cấu hình Gmail SMTP trong file `appsettings.json` hoặc `appsettings.Develop
 
 ```json
 {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
   "EmailSettings": {
     "SmtpServer": "smtp.gmail.com",
     "SmtpPort": 587,
@@ -25,8 +32,6 @@ Cấu hình Gmail SMTP trong file `appsettings.json` hoặc `appsettings.Develop
 ```
 
 **Lưu ý quan trọng:** 
-- Không nên lưu trữ mật khẩu trong file cấu hình trực tiếp trong môi trường production
-- Sử dụng user secrets, biến môi trường hoặc Azure Key Vault cho môi trường production
 - Để sử dụng Gmail SMTP, bạn cần một "App Password" thay vì mật khẩu chính
 
 ## Chạy ứng dụng
